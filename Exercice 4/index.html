@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>Exercice 4</title>
+</head>
+<body>
+  <button id='modifSize'>Augmente la hauteur de 10px</button>
+  <button id='green'>Rectangle en vert</button>
+  <button id='reset'>Couleurs initiales</button>
+  <button id='hide'>Disparaître le rectangle</button>
+  <button id='show'>Réaparaître le rectangle</button>
+  <div id='rectangle' style="background-color: red; border: 1px solid black;height: 50px; width: 400px;">
+  </div>
+  <script>
+  $('#modifSize').click(function(){
+      if($('#rectangle').height() <= 100){
+        $('#rectangle').css('height','+=10px');
+      }else {
+        $('#rectangle').css('height','10px');
+      };
+  });
+  $('#green').click(function(){
+    $('#rectangle').css('background-color','green');
+  });
+  $('#reset').click(function() {
+    $('#rectangle').css('background-color','red');
+  });
+  $('#hide').click(function() {
+    $('#rectangle').hide();
+  });
+  $('#show').click(function() {
+    $('#rectangle').show();
+  });
+  </script>
+</body>
+</html>

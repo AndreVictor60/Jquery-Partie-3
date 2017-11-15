@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>Exercice 3</title>
+</head>
+<body>
+  <button type="button" name="button" id="submit">Vérifier</button>
+  <input type="text" name="" value="" id="number">
+  <script>
+  $(function(){
+    var numberfind=Math.floor(Math.random()*100)+1;
+    var count = 0;
+    $('#submit').click(function(){
+        count++;
+        var number = $('#number').val();
+        if(isNaN(number)==false){
+          if(number > numberfind){
+            alert('Moins');
+          }else if(number < numberfind){
+            alert('Plus');
+          }else{
+            alert('correct, vous avez réussi en '+ count+' coups');
+          }
+        }else {
+          alert('Donnez un nombre');
+        }
+    })
+  });
+  </script>
+</body>
+</html>
